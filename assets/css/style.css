@@ -28,6 +28,10 @@
 .text-center {
     text-align: center !important;
 }
+
+#main {
+    overflow: hidden;
+}
 .contact-content {
     padding: 32px 0;
 }
@@ -43,7 +47,7 @@
     font-size: 15px;
 }
 .contact-form .form-control {
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     width: 100%;
     margin-bottom: 10px;
@@ -58,7 +62,7 @@
     color: #fff;
     padding: 9px 18px;
     float: right;
-    margin-right: 8px;
+    margin-top: 12px;
     border: none;
 }
 .form-submit:hover {
@@ -72,6 +76,7 @@ html {
 }
 
 #header {
+    overflow: hidden;
     height: 46px;
     top: 0px;
     left: 0px;
@@ -79,6 +84,7 @@ html {
     background-color: black;
     position: fixed;    
     z-index: 100;
+
 }
 #nav {
     display: inline-block;
@@ -128,12 +134,22 @@ html {
     line-height: 46px;
     font-size: 14px;
 }
+#header #mobile-menu,
 #header .ti-search {
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
     line-height: 46px;
     padding: 0px 24px;
     font-size: 12px;
     color: #fff;
+}
+#header .ti-menu {
+    display: none;
+}
+#header .ti-menu:hover {
+    background-color: #ccc;
+    color: #000;
 }
 #header .ti-search:hover {
     background-color: red;
@@ -144,10 +160,11 @@ html {
     
 }
 #slider {
+
     margin-top: 46px;
     padding-top: 50%;
     background: url('../img/slider/ny.jpg') top center / cover no-repeat;
-    
+    overflow: hidden;
     position: relative;
      
 }
@@ -174,9 +191,11 @@ html {
 }
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
-    margin-right: auto;
-    padding: 64px 0 112px;
+    margin-right: auto; 
+    padding: 64px 16px 112px;
+    
 }
 #content .content-heading {
     margin-top: 25px;
@@ -202,7 +221,7 @@ html {
     
 }
 
-#content .members-img {
+#content .member-img {
     width: 154px;
     margin-top: 15px;
     border-radius: 5px;
